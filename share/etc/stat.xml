@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config
+    database="localhost:/local/firebird/rdsk_stat-1.0.fdb"
+    user="rdsk"
+    password="****"
+    port="32711">
+    <watcher enabled="true" logname="/tmp/rdsk-isestat-1.0.log">
+</config>

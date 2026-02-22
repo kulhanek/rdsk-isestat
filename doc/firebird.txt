@@ -1,0 +1,26 @@
+RDSK Statistics 
+
+Internal notes:
+
+////////////////////////////////////////////////////////////////////////////////
+
+1) create database and user
+
+$ isql-fb
+> CREATE DATABASE 'localhost:/local/firebird/rdsk_stat-1.0.fdb' USER 'sysdba' PASSWORD '******';
+> CREATE USER rdsk PASSWORD '******';
+> GRANT RDB$ADMIN TO rdsk;
+> QUIT;
+
+////////////////////////////////////////////////////////////////////////////////
+
+2) initialize database
+
+$ isql-fb < rdsk-stat-init.fb
+
+////////////////////////////////////////////////////////////////////////////////
+
+SELECT COUNT(STATISTICS."User") AS "pocet", KEYS."Key" FROM STATISTICS JOIN KEYS ON (KEYS."ID" = STATISTICS."User") GROUP BY STATISTICS."User",KEYS."Key" ORDER BY "pocet" DESC;
+SELECT COUNT(STATISTICS."Site") AS "pocet", KEYS."Key" FROM STATISTICS JOIN KEYS ON (KEYS."ID" = STATISTICS."Site") GROUP BY STATISTICS."Site",KEYS."Key" ORDER BY "pocet" DESC;
+
+

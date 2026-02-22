@@ -1,0 +1,10 @@
+[Unit]
+Description=RDSK iSeStat server
+
+[Service]
+ExecStart=/opt/rdsk-isestat/1.0/sbin/rdsk-isestat /opt/rdsk-isestat/1.0/etc/stat.xml
+User=isestat
+UMask=077
+
+[Install]
+WantedBy=multi-user.target

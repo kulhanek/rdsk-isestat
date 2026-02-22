@@ -1,0 +1,6 @@
+*.cmake
+CMakeFiles
+Makefile
+CMakeCache.txt
+/bin
+abs-ijobstat4.creator.user
