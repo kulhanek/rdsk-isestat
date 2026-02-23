@@ -363,7 +363,7 @@ bool CRDSKStatServer::WriteDataToDatabase(CRDSKStatDatagram& datagram)
     CFirebirdExecuteSQL sql_exec;
     sql_exec.AssignToTransaction(&Transaction);
 
-    if( sql_exec.AllocateInputItems(14) == false ) {
+    if( sql_exec.AllocateInputItems(5) == false ) {
         ES_ERROR("unable to allocate items for ExecuteSQL");
         return(false);
     }
