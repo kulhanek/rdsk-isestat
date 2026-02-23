@@ -110,6 +110,8 @@ bool CRDSKRegister::Run(void)
     dt.GetActualTimeAndDate();
     sender.Datagram.SetTimeAndDate(dt);
 
+    sender.Datagram.Finish();
+
     return(sender.SendDataToServer(Options.GetArgServerName(),Options.GetArgServerPort()));
 }
 

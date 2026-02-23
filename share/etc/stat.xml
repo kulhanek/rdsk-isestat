@@ -4,5 +4,5 @@
     user="rdsk"
     password="****"
     port="32711">
-    <watcher enabled="true" logname="/tmp/rdsk-isestat-1.0.log">
+    <watcher enabled="true" logname="/tmp/rdsk-isestat-1.0.log"/>
 </config>
